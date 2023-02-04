@@ -24,6 +24,11 @@ function App() {
     );
   };
 
+  const createTask = (task) => {
+    console.log(task);
+    setTasks((prevState) => [...prevState, task]);
+  };
+
   return (
     <div className="App">
       <div>active project: {activeProject ? activeProject : "none"}</div>
@@ -40,7 +45,12 @@ function App() {
         />
       </div>
       <div>
-        <Tasks tasks={tasks} />
+        <Tasks
+          tasks={tasks}
+          activeProject={activeProject}
+          createTask={createTask}
+          projects={projects}
+        />
       </div>
     </div>
   );

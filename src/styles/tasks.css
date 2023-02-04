@@ -1,0 +1,9 @@
+.task_form{
+  border: 1px solid black;
+}
+
+
+.selected{
+  background-color: blue;
+}
+
